@@ -96,6 +96,20 @@ import camerashake from "../../../public/Images/camerashake.png"
 import ragdoll from "../../../public/Images/ragdoll.png"
 import reactspring from "../../../public/Images/reactspring.png"
 import gatsby from "../../../public/Images/gatsby.png"
+import mount from "../../../public/Images/mount.png"
+import laptop from "../../../public/Images/laptop.png"
+import zustand from "../../../public/Images/zustand.png"
+import cell from "../../../public/Images/cell.png"
+import router from "../../../public/Images/router.png"
+import softshadows from "../../../public/Images/ragdoll.png"
+import lulaby from "../../../public/Images/lulaby.png"
+import viking from "../../../public/Images/viking.png"
+import wobbling from "../../../public/Images/wobbling.png"
+import moksha from "../../../public/Images/moksha.png"
+import flexbox from "../../../public/Images/flexbox.png"
+import confetti from "../../../public/Images/confetti.png"
+import jason from "../../../public/Images/jason.png"
+import spotlight from "../../../public/Images/spotlight.png"
 
 
 
@@ -932,116 +946,116 @@ export default function FeaturedWork() {
       image: reactspring,
       ref: useRef(null)
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
+      id: 'mount',
+      title: 'Mount transitions',
+      tags: 'Three.JS • Mount ',
+      link: 'https://codesandbox.io/p/sandbox/1sccp',
       // Using placeholder until actual image is available
-      image: lusion,
+      image: mount,
       ref: useRef(null)
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
+      id: 'laptop',
+      title: 'Floating laptop',
+      tags: 'Three.JS • Laptop ',
+      link: 'https://codesandbox.io/p/sandbox/q23sw',
       // Using placeholder until actual image is available
-      image: lusion,
+      image: laptop,
       ref: useRef(null)
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
+      id: 'zustand',
+      title: 'Zustand site',
+      tags: 'Three.JS • Zustand ',
+      link: 'https://codesandbox.io/p/sandbox/gpioq',
       // Using placeholder until actual image is available
-      image: lusion,
+      image: zustand,
       ref: useRef(null)
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
+      id: 'cell',
+      title: 'Cell fracture',
+      tags: 'Three.JS • Cell ',
+      link: 'https://codesandbox.io/p/sandbox/3rjsl',
       // Using placeholder until actual image is available
-      image: lusion,
+      image: cell,
       ref: useRef(null)
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
+      id: 'router',
+      title: 'Router transitions',
+      tags: 'Three.JS • Router ',
+      link: 'https://codesandbox.io/p/sandbox/4j2q2',
       // Using placeholder until actual image is available
-      image: lusion,
+      image: router,
       ref: useRef(null)
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
+      id: 'softshadows',
+      title: 'Soft shadows',
+      tags: 'Three.JS • Shadows ',
+      link: 'https://codesandbox.io/p/sandbox/dh2jc',
       // Using placeholder until actual image is available
-      image: lusion,
+      image: softshadows,
       ref: useRef(null)
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
+      id: 'lulaby',
+      title: 'Lulaby City',
+      tags: 'Three.JS • City ',
+      link: 'https://codesandbox.io/p/sandbox/gkfhr',
       // Using placeholder until actual image is available
-      image: lusion,
+      image: lulaby,
       ref: useRef(null)
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
+      id: 'viking',
+      title: 'Viking Ship',
+      tags: 'Three.JS • Ship ',
+      link: 'https://codesandbox.io/p/sandbox/0buje',
       // Using placeholder until actual image is available
-      image: lusion,
+      image: viking,
       ref: useRef(null)
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
+      id: 'wobbling',
+      title: 'Wobbling Sphere',
+      tags: 'Three.JS • Sphere ',
+      link: 'https://codesandbox.io/p/sandbox/5oufp',
       // Using placeholder until actual image is available
-      image: lusion,
+      image: wobbling,
       ref: useRef(null)
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
+      id: 'moksha',
+      title: 'Moksha',
+      tags: 'Three.JS • Moksha ',
+      link: 'https://codesandbox.io/p/sandbox/f1ixt',
       // Using placeholder until actual image is available
-      image: lusion,
+      image: moksha,
       ref: useRef(null)
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
+      id: 'flexbox',
+      title: 'Flexbox + Yoga',
+      tags: 'Three.JS • WebGL ',
+      link: 'https://codesandbox.io/p/sandbox/7psew',
       // Using placeholder until actual image is available
-      image: lusion,
+      image: flexbox,
       ref: useRef(null)
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
+      id: 'confetti',
+      title: 'Confetti',
       tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
+      link: 'https://codesandbox.io/p/sandbox/vl221',
       // Using placeholder until actual image is available
-      image: lusion,
+      image: confetti,
       ref: useRef(null)
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
+      id: 'jason',
+      title: 'Jason',
+      tags: 'Three.JS • Jason ',
+      link: 'https://codesandbox.io/p/sandbox/oep9o',
       // Using placeholder until actual image is available
-      image: lusion,
+      image: jason,
       ref: useRef(null)
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
+      id: 'spotlight',
+      title: 'Spotlight',
+      tags: 'Three.JS • Spotlight ',
+      link: 'https://codesandbox.io/p/sandbox/tx1pq',
       // Using placeholder until actual image is available
-      image: lusion,
+      image: spotlight,
       ref: useRef(null)
     },{
       id: 'lusion',
