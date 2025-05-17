@@ -1,5 +1,5 @@
 "use client"
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import Image from 'next/image'
 import christmasImg from "../../../public/Images/christmas.jpg"
 import shopping from "../../../public/Images/Shopping.png"
@@ -110,64 +110,62 @@ import flexbox from "../../../public/Images/flexbox.png"
 import confetti from "../../../public/Images/confetti.png"
 import jason from "../../../public/Images/jason.png"
 import spotlight from "../../../public/Images/spotlight.png"
-
-
-
+import racing from "../../../public/Images/racing.png"
+import pinball from "../../../public/Images/jason.png"
+import space from "../../../public/Images/space.png"
+import minecraft from "../../../public/Images/minecraft.png"
+import arkanoid from "../../../public/Images/arkanoid.png"
+import pingpong from "../../../public/Images/pingpong.png"
+import arkanoid60 from "../../../public/Images/arkanoid60.png"
+import shader from "../../../public/Images/shader.png"
+import water from "../../../public/Images/water.png"
+import staging from "../../../public/Images/staging.png"
+import grading from "../../../public/Images/grading.png"
 
 
 
 export default function FeaturedWork() {
-  // Track mouse position and previous position for smoother transitions
-  const [mousePosition, setMousePosition] = useState({ x: 0.5, y: 0.5 });
-  const [targetPosition, setTargetPosition] = useState({ x: 0.5, y: 0.5 });
-  const [isHovering, setIsHovering] = useState(null);
-  const [isGlitching, setIsGlitching] = useState(false);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-  
-  // Project data with correctly referenced images
+  const [isHovering, setIsHovering] = useState<string | null>(null);
+  const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({ x: 0.5, y: 0.5 });
+  const [targetPosition, setTargetPosition] = useState<{ x: number; y: number }>({ x: 0.5, y: 0.5 });
+  const [isGlitching, setIsGlitching] = useState<boolean>(false);
+  const [imagesLoaded, setImagesLoaded] = useState<boolean>(false);
+
   const projects = [
     {
       id: 'lusion',
       title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
+      tags: 'Three.JS • Lusion',
       link: 'https://codesandbox.io/p/sandbox/xy8c8z',
-      // Using placeholder until actual image is available
-      image: lusion,
-      ref: useRef(null)
+      image: lusion
     },
     {
       id: 'Shopping',
-      title: 'Fake Glow Material',
+      title: 'Shopping',
       tags: 'Vanilla • Three.js • 3D',
       link: 'https://codesandbox.io/p/devbox/admiring-tu-3r875p',
-      image: shopping,
-      ref: useRef(null)
+      image: shopping
     },
     {
       id: 'cardfloat',
       title: 'Card With Border Radius',
-      tags: 'Three.JS • 3D CARDS ',
+      tags: 'Three.JS • 3D CARDS',
       link: 'https://codesandbox.io/p/devbox/cards-with-border-radius-forked-d7fhy8',
-      // Using placeholder until actual image is available
-      image: cardfloat,
-      ref: useRef(null)
+      image: cardfloat
     },
     {
       id: 'fisheye',
       title: 'ThreeJS Fisheye',
-      tags: 'Three.JS • Fisheye ',
+      tags: 'Three.JS • Fisheye',
       link: 'https://codesandbox.io/p/devbox/threejs-journey-lv-1-fisheye-forked-hw8m63',
-      // Using placeholder until actual image is available
-      image: fisheye,
-      ref: useRef(null)
+      image: fisheye
     },
     {
-      id: 'inventory',
-      title: 'Fake Glow Material',
+      id: 'grading',
+      title: 'Color Grading',
       tags: 'Vanilla • Three.js • 3D',
-      link: 'https://codesandbox.io/p/github/nodesinfinity/fake-glow-material-threejs/main',
-      image: '/projects/code-constructor.jpg',
-      ref: useRef(null)
+      link: 'https://codesandbox.io/p/sandbox/wvgxp',
+      image: grading
     },
     {
       id: 'Christman',
@@ -176,7 +174,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/github/nodesinfinity/christmas-threejs/main',
       // Using placeholder until actual image is available
       image: christmasImg,
-      ref: useRef(null)
     },
     {
       id: 'ecctrl',
@@ -185,7 +182,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/nvk9pf',
       // Using placeholder until actual image is available
       image: ecctrl,
-      ref: useRef(null)
     },
     {
       id: 'monitors',
@@ -194,7 +190,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/bst0cy',
       // Using placeholder until actual image is available
       image: monitors,
-      ref: useRef(null)
     },
     {
       id: 'banana',
@@ -203,7 +198,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/2ycs3?file=%2Fsrc%2Findex.js',
       // Using placeholder until actual image is available
       image: banana,
-      ref: useRef(null)
     },
     {
       id: 'tshirt',
@@ -212,7 +206,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/ioxywi?file=%2Fsrc%2Findex.js',
       // Using placeholder until actual image is available
       image: tshirts,
-      ref: useRef(null)
     },
     {
       id: 'caustics',
@@ -221,7 +214,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/szj6p7',
       // Using placeholder until actual image is available
       image: caustics,
-      ref: useRef(null)
     },
     {
       id: 'ssgi',
@@ -230,7 +222,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/5w35n6',
       // Using placeholder until actual image is available
       image: ssgi,
-      ref: useRef(null)
     },
     {
       id: 'cloud',
@@ -239,7 +230,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/gwthnh?file=%2Fsrc%2FApp.js',
       // Using placeholder until actual image is available
       image: cloud,
-      ref: useRef(null)
     },
     {
       id: 'motion',
@@ -248,7 +238,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/2y73c6',
       // Using placeholder until actual image is available
       image: motion,
-      ref: useRef(null)
     },
     {
       id: 'room',
@@ -257,7 +246,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/ykfpwf',
       // Using placeholder until actual image is available
       image: room,
-      ref: useRef(null)
     },
     {
       id: 'godray',
@@ -266,7 +254,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/yggpw5',
       // Using placeholder until actual image is available
       image: godray,
-      ref: useRef(null)
     },
     {
       id: 'portals',
@@ -275,7 +262,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/9m4tpc',
       // Using placeholder until actual image is available
       image: portals,
-      ref: useRef(null)
     },
     {
       id: 'pass',
@@ -284,7 +270,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/qvk72r',
       // Using placeholder until actual image is available
       image: pass,
-      ref: useRef(null)
     },
     {
       id: 'magicbox',
@@ -293,7 +278,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/drc6qg',
       // Using placeholder until actual image is available
       image: magicbox,
-      ref: useRef(null)
     },
     {
       id: 'cookie',
@@ -302,7 +286,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/hmbn1l',
       // Using placeholder until actual image is available
       image: cookie,
-      ref: useRef(null)
     },
     {
       id: 'glass',
@@ -311,7 +294,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/hmbn1l',
       // Using placeholder until actual image is available
       image: glass,
-      ref: useRef(null)
     },
     {
       id: 'cards',
@@ -320,7 +302,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/dc5fjy',
       // Using placeholder until actual image is available
       image: cards,
-      ref: useRef(null)
     },
     {
       id: 'ring',
@@ -329,7 +310,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/3ywzzx',
       // Using placeholder until actual image is available
       image: ring,
-      ref: useRef(null)
     },
     {
       id: 'gallery',
@@ -338,7 +318,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/xy8c8z',
       // Using placeholder until actual image is available
       image: gallery,
-      ref: useRef(null)
     },
     {
       id: 'tiles',
@@ -347,7 +326,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/xy8c8z',
       // Using placeholder until actual image is available
       image: tiles,
-      ref: useRef(null)
     },
     {
       id: 'bubbles',
@@ -356,7 +334,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/zxpv7',
       // Using placeholder until actual image is available
       image: bubbles,
-      ref: useRef(null)
     },
     {
       id: 'graces',
@@ -365,7 +342,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/0n9it',
       // Using placeholder until actual image is available
       image: graces,
-      ref: useRef(null)
     },
     {
       id: 'frost',
@@ -374,7 +350,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/imn42',
       // Using placeholder until actual image is available
       image: frost,
-      ref: useRef(null)
     },
     {
       id: 'drone',
@@ -383,7 +358,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/pbwi6i',
       // Using placeholder until actual image is available
       image: drone,
-      ref: useRef(null)
     },
     {
       id: 'starwars',
@@ -392,7 +366,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/fslt99',
       // Using placeholder until actual image is available
       image: starwars,
-      ref: useRef(null)
     },
     {
       id: 'bruno',
@@ -401,7 +374,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/2qfxj4',
       // Using placeholder until actual image is available
       image: bruno,
-      ref: useRef(null)
     },
     {
       id: 'refraction',
@@ -410,7 +382,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/e662p3',
       // Using placeholder until actual image is available
       image: refraction,
-      ref: useRef(null)
     },
     {
       id: 'envmaps',
@@ -419,7 +390,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/e662p3',
       // Using placeholder until actual image is available
       image: envmaps,
-      ref: useRef(null)
     },
     {
       id: 'prism',
@@ -428,7 +398,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/j3ycvl',
       // Using placeholder until actual image is available
       image: prism,
-      ref: useRef(null)
     },
     {
       id: 'porshe',
@@ -437,7 +406,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/lwo219',
       // Using placeholder until actual image is available
       image: porshe,
-      ref: useRef(null)
     },
     {
       id: 'shoe',
@@ -446,7 +414,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/qxjoj',
       // Using placeholder until actual image is available
       image: shoe,
-      ref: useRef(null)
     },
     {
       id: 'audio',
@@ -455,7 +422,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/dvokj',
       // Using placeholder until actual image is available
       image: audio,
-      ref: useRef(null)
     },
     {
       id: 'ground',
@@ -464,7 +430,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/bfplr',
       // Using placeholder until actual image is available
       image: ground,
-      ref: useRef(null)
     },
     {
       id: 'portal',
@@ -473,7 +438,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/ni6v4',
       // Using placeholder until actual image is available
       image: portal,
-      ref: useRef(null)
     },
     {
       id: 'occlusion',
@@ -482,7 +446,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/9keg6',
       // Using placeholder until actual image is available
       image: occlusion,
-      ref: useRef(null)
     },
     {
       id: 'spline',
@@ -491,7 +454,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/f79ucc',
       // Using placeholder until actual image is available
       image: spline,
-      ref: useRef(null)
     },
     {
       id: 'diamondrefraction',
@@ -500,7 +462,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/zqrreo',
       // Using placeholder until actual image is available
       image: diamondrefraction,
-      ref: useRef(null)
     },
     {
       id: 'diamondring',
@@ -509,7 +470,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/4gy946',
       // Using placeholder until actual image is available
       image: diamondring,
-      ref: useRef(null)
     },
     {
       id: 'projection',
@@ -518,7 +478,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/q48jgy',
       // Using placeholder until actual image is available
       image: projection,
-      ref: useRef(null)
     },
     {
       id: 'splineglass',
@@ -527,7 +486,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/ju368j',
       // Using placeholder until actual image is available
       image: splineglass,
-      ref: useRef(null)
     },
     {
       id: 'bunny',
@@ -536,7 +494,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/mlgzsc',
       // Using placeholder until actual image is available
       image: bunny,
-      ref: useRef(null)
     },
     {
       id: 'csg',
@@ -545,7 +502,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/y52tmt',
       // Using placeholder until actual image is available
       image: csg,
-      ref: useRef(null)
     },
     {
       id: 'gltf',
@@ -554,7 +510,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/hg3ejl',
       // Using placeholder until actual image is available
       image: gltf,
-      ref: useRef(null)
     },
     {
       id: 'clump',
@@ -563,7 +518,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/ssbdsw',
       // Using placeholder until actual image is available
       image: clump,
-      ref: useRef(null)
     },
     {
       id: 'fields',
@@ -572,7 +526,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/024uom',
       // Using placeholder until actual image is available
       image: fields,
-      ref: useRef(null)
     },
     {
       id: 'scrollcontrols',
@@ -581,7 +534,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/gsm1y',
       // Using placeholder until actual image is available
       image: scrollcontrols,
-      ref: useRef(null)
     },
     {
       id: 'infinity',
@@ -590,7 +542,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/x8gvs',
       // Using placeholder until actual image is available
       image: infinity,
-      ref: useRef(null)
     },{
       id: 'minimap',
       title: 'Scrollcontrols with minimap',
@@ -598,7 +549,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/yjhzv',
       // Using placeholder until actual image is available
       image: minimap,
-      ref: useRef(null)
     },{
       id: 'instanced',
       title: 'Instanced particles + Effects',
@@ -606,7 +556,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/qpfgyp',
       // Using placeholder until actual image is available
       image: instanced,
-      ref: useRef(null)
     },{
       id: 'furniture',
       title: 'Dbismut furniture',
@@ -614,7 +563,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/62o18n',
       // Using placeholder until actual image is available
       image: furniture,
-      ref: useRef(null)
     },{
       id: 'portalshapes',
       title: 'Portal Shapes',
@@ -622,7 +570,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/8j36ok',
       // Using placeholder until actual image is available
       image: portalshapes,
-      ref: useRef(null)
     },{
       id: 'aquarium',
       title: 'Aquarium',
@@ -630,7 +577,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/n7jf0f',
       // Using placeholder until actual image is available
       image: aquarium,
-      ref: useRef(null)
     },{
       id: 'blend',
       title: 'Portals Blend',
@@ -638,7 +584,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/ik11ln',
       // Using placeholder until actual image is available
       image: blend,
-      ref: useRef(null)
     },{
       id: 'inter',
       title: 'Inter, epoxy resin',
@@ -646,7 +591,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/lxvqek',
       // Using placeholder until actual image is available
       image: inter,
-      ref: useRef(null)
     },{
       id: 'stage',
       title: 'Stage presets, gltfjsx',
@@ -654,7 +598,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/if9crg',
       // Using placeholder until actual image is available
       image: stage,
-      ref: useRef(null)
     },{
       id: 'react',
       title: 'React EllipseCurve',
@@ -662,7 +605,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/xzi6ps',
       // Using placeholder until actual image is available
       image: react,
-      ref: useRef(null)
     },{
       id: 'decals',
       title: 'Iridescent decals',
@@ -670,7 +612,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/qvb1vk',
       // Using placeholder until actual image is available
       image: decals,
-      ref: useRef(null)
     },{
       id: 'baking',
       title: 'Baking soft shadows',
@@ -678,7 +619,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/hxcc1x',
       // Using placeholder until actual image is available
       image: baking,
-      ref: useRef(null)
     },{
       id: 'test',
       title: 'SSR Test',
@@ -686,7 +626,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/8pbw1f',
       // Using placeholder until actual image is available
       image: test,
-      ref: useRef(null)
     },{
       id: 'operations',
       title: 'CSG operations + Rapier physics',
@@ -694,7 +633,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/mw0dtc',
       // Using placeholder until actual image is available
       image: operations,
-      ref: useRef(null)
     },{
       id: 'faucets',
       title: 'Faucets, select highlight',
@@ -702,7 +640,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/8flefh',
       // Using placeholder until actual image is available
       image: faucets,
-      ref: useRef(null)
     },{
       id: 'rapier',
       title: 'Rapier physics',
@@ -710,7 +647,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/7e9y1b',
       // Using placeholder until actual image is available
       image: rapier,
-      ref: useRef(null)
     },{
       id: 'hdr',
       title: 'Bloom hdr workflow, GLTF',
@@ -718,7 +654,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/whnhyr',
       // Using placeholder until actual image is available
       image: hdr,
-      ref: useRef(null)
     },{
       id: 'groundlamina',
       title: 'Ground projected envmaps + lamina',
@@ -726,7 +661,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/0c5hv9',
       // Using placeholder until actual image is available
       image: groundlamina,
-      ref: useRef(null)
     },{
       id: 'ballpit',
       title: 'Basic ballpit',
@@ -734,7 +668,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/0fqow2',
       // Using placeholder until actual image is available
       image: ballpit,
-      ref: useRef(null)
     },{
       id: 'backdrop',
       title: 'Backdrop and cables',
@@ -742,7 +675,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/2ij9u',
       // Using placeholder until actual image is available
       image: backdrop,
-      ref: useRef(null)
     },
     {
       id: 'clones',
@@ -751,7 +683,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/42glz0',
       // Using placeholder until actual image is available
       image: clones,
-      ref: useRef(null)
     }, {
       id: 'lamina1x',
       title: 'lamina 1.x',
@@ -759,7 +690,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/ledhe1',
       // Using placeholder until actual image is available
       image: lamina1x,
-      ref: useRef(null)
     }, {
       id: 'outlines',
       title: 'React-pp outlines',
@@ -767,7 +697,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/nurp5t',
       // Using placeholder until actual image is available
       image: outlines,
-      ref: useRef(null)
     }, {
       id: 'gatsby',
       title: 'Gatsby stars',
@@ -775,7 +704,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/2csbr1',
       // Using placeholder until actual image is available
       image: gatsby,
-      ref: useRef(null)
     }, {
       id: 'pmndrs',
       title: 'Pmndrs + Vercel',
@@ -783,7 +711,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/go0b4w',
       // Using placeholder until actual image is available
       image: pmndrs,
-      ref: useRef(null)
     }, {
       id: 'hall',
       title: 'Sport Hall',
@@ -791,7 +718,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/s006f',
       // Using placeholder until actual image is available
       image: hall,
-      ref: useRef(null)
     }, {
       id: 'train',
       title: 'Night Train',
@@ -799,7 +725,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/l900i',
       // Using placeholder until actual image is available
       image: train,
-      ref: useRef(null)
     }, {
       id: 'bouncy',
       title: 'Bouncy Watch',
@@ -807,7 +732,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/qyz5r',
       // Using placeholder until actual image is available
       image: bouncy,
-      ref: useRef(null)
     }, {
       id: 'transparent',
       title: 'Transparent aesop bottles',
@@ -815,7 +739,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/kv7tv',
       // Using placeholder until actual image is available
       image: transparent,
-      ref: useRef(null)
     }, {
       id: 'raycast',
       title: 'Raycast Cycling',
@@ -823,7 +746,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/ls503',
       // Using placeholder until actual image is available
       image: raycast,
-      ref: useRef(null)
     }, {
       id: 'landingpage',
       title: 'Landing Page',
@@ -831,7 +753,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/n60qg',
       // Using placeholder until actual image is available
       image: landingpage,
-      ref: useRef(null)
     }, {
       id: 'scrollcontrolsgltf',
       title: 'Scrollcontrols + GLTF',
@@ -839,7 +760,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/4jr4p',
       // Using placeholder until actual image is available
       image: scrollcontrolsgltf,
-      ref: useRef(null)
     }, {
       id: 'instance',
       title: 'Merged Instance',
@@ -847,7 +767,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/kud9p',
       // Using placeholder until actual image is available
       image: instance,
-      ref: useRef(null)
     }, {
       id: 'dof',
       title: 'GPGPU Curl-noise + DOF',
@@ -855,7 +774,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/zgsyn',
       // Using placeholder until actual image is available
       image: dof,
-      ref: useRef(null)
     }, {
       id: 'key',
       title: 'Hi Key',
@@ -863,7 +781,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/i6t0j',
       // Using placeholder until actual image is available
       image: key,
-      ref: useRef(null)
     }, {
       id: 'floatingshoes',
       title: 'Floating Instance Shoes',
@@ -871,7 +788,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/h8o2d',
       // Using placeholder until actual image is available
       image: floatingshoes,
-      ref: useRef(null)
     }, {
       id: 'simple audio',
       title: 'Simple Audio Analyser',
@@ -879,7 +795,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/wu51m',
       // Using placeholder until actual image is available
       image: simpleaudio,
-      ref: useRef(null)
     }, {
       id: 'camerascroll',
       title: 'Camera Scroll',
@@ -887,7 +802,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/tu24h',
       // Using placeholder until actual image is available
       image: camerascroll,
-      ref: useRef(null)
     }, {
       id: 'springyboxes',
       title: 'Springy Boxes',
@@ -895,7 +809,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/jz9l97qn89',
       // Using placeholder until actual image is available
       image: springyboxes,
-      ref: useRef(null)
     }, {
       id: 'floatingdiamond',
       title: 'Floating Diamond',
@@ -903,7 +816,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/prb9t',
       // Using placeholder until actual image is available
       image: floatingdiamond,
-      ref: useRef(null)
     },
     {
       id: 'gltfanimations',
@@ -912,7 +824,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/pecl6',
       // Using placeholder until actual image is available
       image: gltfanimations,
-      ref: useRef(null)
     },{
       id: 'sparks',
       title: 'Sparks & Effects',
@@ -920,7 +831,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/sbf2i',
       // Using placeholder until actual image is available
       image: sparks,
-      ref: useRef(null)
     },{
       id: 'camerashake',
       title: 'Camera Shake',
@@ -928,7 +838,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/t4l0f',
       // Using placeholder until actual image is available
       image: camerashake,
-      ref: useRef(null)
     },{
       id: 'ragdoll',
       title: 'Ragdoll Physics',
@@ -936,7 +845,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/wdzv4',
       // Using placeholder until actual image is available
       image: ragdoll,
-      ref: useRef(null)
     },{
       id: 'reactspring',
       title: 'React-Spring Animations',
@@ -944,7 +852,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/6hi1y',
       // Using placeholder until actual image is available
       image: reactspring,
-      ref: useRef(null)
     },{
       id: 'mount',
       title: 'Mount transitions',
@@ -952,7 +859,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/1sccp',
       // Using placeholder until actual image is available
       image: mount,
-      ref: useRef(null)
     },{
       id: 'laptop',
       title: 'Floating laptop',
@@ -960,7 +866,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/q23sw',
       // Using placeholder until actual image is available
       image: laptop,
-      ref: useRef(null)
     },{
       id: 'zustand',
       title: 'Zustand site',
@@ -968,7 +873,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/gpioq',
       // Using placeholder until actual image is available
       image: zustand,
-      ref: useRef(null)
     },{
       id: 'cell',
       title: 'Cell fracture',
@@ -976,7 +880,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/3rjsl',
       // Using placeholder until actual image is available
       image: cell,
-      ref: useRef(null)
     },{
       id: 'router',
       title: 'Router transitions',
@@ -984,7 +887,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/4j2q2',
       // Using placeholder until actual image is available
       image: router,
-      ref: useRef(null)
     },{
       id: 'softshadows',
       title: 'Soft shadows',
@@ -992,7 +894,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/dh2jc',
       // Using placeholder until actual image is available
       image: softshadows,
-      ref: useRef(null)
     },{
       id: 'lulaby',
       title: 'Lulaby City',
@@ -1000,7 +901,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/gkfhr',
       // Using placeholder until actual image is available
       image: lulaby,
-      ref: useRef(null)
     },{
       id: 'viking',
       title: 'Viking Ship',
@@ -1008,7 +908,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/0buje',
       // Using placeholder until actual image is available
       image: viking,
-      ref: useRef(null)
     },{
       id: 'wobbling',
       title: 'Wobbling Sphere',
@@ -1016,7 +915,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/5oufp',
       // Using placeholder until actual image is available
       image: wobbling,
-      ref: useRef(null)
     },{
       id: 'moksha',
       title: 'Moksha',
@@ -1024,7 +922,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/f1ixt',
       // Using placeholder until actual image is available
       image: moksha,
-      ref: useRef(null)
     },{
       id: 'flexbox',
       title: 'Flexbox + Yoga',
@@ -1032,7 +929,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/7psew',
       // Using placeholder until actual image is available
       image: flexbox,
-      ref: useRef(null)
     },{
       id: 'confetti',
       title: 'Confetti',
@@ -1040,7 +936,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/vl221',
       // Using placeholder until actual image is available
       image: confetti,
-      ref: useRef(null)
     },{
       id: 'jason',
       title: 'Jason',
@@ -1048,7 +943,6 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/oep9o',
       // Using placeholder until actual image is available
       image: jason,
-      ref: useRef(null)
     },{
       id: 'spotlight',
       title: 'Spotlight',
@@ -1056,167 +950,129 @@ export default function FeaturedWork() {
       link: 'https://codesandbox.io/p/sandbox/tx1pq',
       // Using placeholder until actual image is available
       image: spotlight,
-      ref: useRef(null)
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
+      id: 'racing',
+      title: 'Racing Game',
+      tags: 'Three.JS • Racing ',
+      link: 'https://codesandbox.io/p/sandbox/lo6kp',
+      // Using placeholder until actual image is available
+      image: racing,
+    },{
+      id: 'pinball',
+      title: 'Pinball in 70 lines',
+      tags: 'Three.JS • Pinball ',
+      link: 'https://codesandbox.io/p/sandbox/rmfcq',
+      // Using placeholder until actual image is available
+      image: pinball,
+    },{
+      id: 'space',
+      title: 'Space Game',
+      tags: 'Three.JS • Space ',
+      link: 'https://codesandbox.io/p/sandbox/i2160',
+      // Using placeholder until actual image is available
+      image: space,
+    },{
+      id: 'minecraft',
+      title: 'Minecraft',
+      tags: 'Three.JS • Minecraft ',
+      link: 'https://codesandbox.io/p/sandbox/vkgi6',
+      // Using placeholder until actual image is available
+      image: minecraft,
+    },{
+      id: 'arkanoid',
+      title: 'Arkanoid',
+      tags: 'Three.JS • Arkanoid ',
+      link: 'https://codesandbox.io/p/sandbox/2yqpv',
+      // Using placeholder until actual image is available
+      image: arkanoid,
+    },{
+      id: 'pingpong',
+      title: 'Rapier Ping-Pong',
+      tags: 'Three.JS • Ping-Pong ',
+      link: 'https://codesandbox.io/p/sandbox/ptdgrn',
+      // Using placeholder until actual image is available
+      image: pingpong,
+    },{
+      id: 'arkanoid60',
+      title: 'Arkanoid under 60 LOC',
+      tags: 'Three.JS • Arkanoid ',
       link: 'https://codesandbox.io/p/sandbox/xy8c8z',
       // Using placeholder until actual image is available
-      image: lusion,
-      ref: useRef(null)
+      image: arkanoid60,
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
+      id: 'shader',
+      title: 'Shader HMR',
+      tags: 'Three.JS • Shader ',
+      link: 'https://codesandbox.io/p/sandbox/ib0jc',
       // Using placeholder until actual image is available
-      image: lusion,
-      ref: useRef(null)
+      image: shader,
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
+      id: 'water',
+      title: 'Water Shader',
+      tags: 'Three.JS • Water ',
+      link: 'https://codesandbox.io/p/sandbox/1b40u',
       // Using placeholder until actual image is available
-      image: lusion,
-      ref: useRef(null)
+      image: water,
     },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
+      id: 'staging',
+      title: 'Staging and CameraShake',
+      tags: 'Three.JS • Staging ',
+      link: 'https://codesandbox.io/p/sandbox/0ycwe',
       // Using placeholder until actual image is available
-      image: lusion,
-      ref: useRef(null)
-    },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
-      // Using placeholder until actual image is available
-      image: lusion,
-      ref: useRef(null)
-    },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
-      // Using placeholder until actual image is available
-      image: lusion,
-      ref: useRef(null)
-    },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
-      // Using placeholder until actual image is available
-      image: lusion,
-      ref: useRef(null)
-    },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
-      // Using placeholder until actual image is available
-      image: lusion,
-      ref: useRef(null)
-    },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
-      // Using placeholder until actual image is available
-      image: lusion,
-      ref: useRef(null)
-    },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
-      // Using placeholder until actual image is available
-      image: lusion,
-      ref: useRef(null)
-    },{
-      id: 'lusion',
-      title: 'Lusion Connector',
-      tags: 'Three.JS • Lusion ',
-      link: 'https://codesandbox.io/p/sandbox/xy8c8z',
-      // Using placeholder until actual image is available
-      image: lusion,
-      ref: useRef(null)
-    },
+      image: staging,
+    }
   ];
-  
-  // Animation frame for smooth transitions
+
   useEffect(() => {
-    let animationFrameId;
-    
+    let animationFrameId: number | undefined;
+
     if (isHovering) {
       const smoothTransition = () => {
         setMousePosition(prev => ({
           x: prev.x + (targetPosition.x - prev.x) * 0.08,
           y: prev.y + (targetPosition.y - prev.y) * 0.08
         }));
-        
+
         animationFrameId = requestAnimationFrame(smoothTransition);
       };
-      
+
       animationFrameId = requestAnimationFrame(smoothTransition);
     }
-    
+
     return () => {
-      if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId);
-      }
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
     };
   }, [isHovering, targetPosition]);
 
-  // Define the modified effect styles
   const enhancedEffectStyle = `
     @keyframes glitchEffect {
-      0% {
-        transform: translate(0);
-        filter: brightness(1);
-      }
-      25% {
-        transform: translate(-3px, 1px);
-        filter: brightness(1.03) contrast(1.03);
-      }
-      50% {
-        transform: translate(2px, -1px);
-        filter: brightness(0.97) contrast(1.05);
-      }
-      75% {
-        transform: translate(-2px, 1px);
-        filter: brightness(1.02);
-      }
-      100% {
-        transform: translate(0);
-        filter: brightness(1);
-      }
+      0% { transform: translate(0); filter: brightness(1); }
+      25% { transform: translate(-3px, 1px); filter: brightness(1.03) contrast(1.03); }
+      50% { transform: translate(2px, -1px); filter: brightness(0.97) contrast(1.05); }
+      75% { transform: translate(-2px, 1px); filter: brightness(1.02); }
+      100% { transform: translate(0); filter: brightness(1); }
     }
-    
+
     .image-hover-container {
       position: relative;
       overflow: hidden;
       transition: transform 0.2s ease-out;
       perspective: 1000px;
     }
-    
+
     .image-hover-container:hover {
       transform: scale(0.98);
     }
-    
+
     .image-hover-container .image-wrapper {
       transition: transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
       transform-style: preserve-3d;
     }
-    
+
     .image-hover-container:hover .image-wrapper.glitching {
       animation: glitchEffect 0.2s 4 linear;
     }
-    
+
     .image-hover-container .image-glitch {
       opacity: 0;
       position: absolute;
@@ -1229,110 +1085,63 @@ export default function FeaturedWork() {
       pointer-events: none;
       transition: opacity 0.3s ease;
     }
-    
+
     .image-hover-container:hover .image-glitch.glitching {
       opacity: 0.35;
     }
   `;
 
-  // Handle mouse movement for parallax effect
-  const handleMouseMove = (e, ref) => {
-    if (!ref.current) return;
-    
-    const rect = ref.current.getBoundingClientRect();
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width;
     const y = (e.clientY - rect.top) / rect.height;
-    
     setTargetPosition({ x, y });
   };
 
-  // Handle mouse enter with glitch effect timing
-  const handleMouseEnter = (projectId) => {
+  const handleMouseEnter = (projectId: string) => {
     setIsHovering(projectId);
     setIsGlitching(true);
-    
-    // Turn off glitching after 0.8 seconds (shorter shake)
-    setTimeout(() => {
-      setIsGlitching(false);
-    }, 200);
+    setTimeout(() => setIsGlitching(false), 200);
   };
-  
-  // Handle mouse leave
+
   const handleMouseLeave = () => {
     setIsHovering(null);
     setTargetPosition({ x: 0.5, y: 0.5 });
     setMousePosition({ x: 0.5, y: 0.5 });
   };
 
-  // Handle project click
-  const handleProjectClick = (link) => {
-    window.open(link, '_blank');
-  };
-
-  // Preload images to prevent flickering
   useEffect(() => {
-    // Set images as loaded after a short delay
-    // This is simplified since we're using Next.js Image or properly imported images
-    const timer = setTimeout(() => {
-      setImagesLoaded(true);
-    }, 300);
-    
+    const timer = setTimeout(() => setImagesLoaded(true), 300);
     return () => clearTimeout(timer);
   }, []);
 
-  // Helper function to render the project image based on its type
-  const renderProjectImage = (project) => {
-    // If it's an imported image (object)
-    if (typeof project.image === 'object' || project.image.startsWith('/')) {
-      return (
-        <div className="w-full h-full relative">
-          <Image 
-            src={project.image}
-            alt={project.title}
-            fill
-            style={{ 
-              objectFit: 'cover',
-              transform: isHovering === project.id 
-                ? `translate(${(mousePosition.x - 0.5) * -15}px, ${(mousePosition.y - 0.5) * -15}px) 
-                   rotateY(${(mousePosition.x - 0.5) * 6}deg) 
-                   rotateX(${(mousePosition.y - 0.5) * -6}deg)`
-                : 'none'
-            }}
-          />
-        </div>
-      );
-    }
-    
-    // Fallback for other image paths
+  const renderProjectImage = (project: { image: React.MouseEvent<HTMLButtonElement>, title: string, id: string }) => {
     return (
-      <div 
-        className="w-full h-full bg-gray-300"
-        style={{ 
-          transform: isHovering === project.id 
-            ? `translate(${(mousePosition.x - 0.5) * -15}px, ${(mousePosition.y - 0.5) * -15}px) 
-               rotateY(${(mousePosition.x - 0.5) * 6}deg) 
-               rotateX(${(mousePosition.y - 0.5) * -6}deg)`
-            : 'none',
-          backgroundImage: `url(${project.image})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-      />
+      <div className="w-full h-full relative">
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          style={{
+            objectFit: 'cover',
+            transform: isHovering === project.id
+              ? `translate(${(mousePosition.x - 0.5) * -15}px, ${(mousePosition.y - 0.5) * -15}px)
+                 rotateY(${(mousePosition.x - 0.5) * 6}deg)
+                 rotateX(${(mousePosition.y - 0.5) * -6}deg)`
+              : 'none'
+          }}
+        />
+      </div>
     );
   };
 
   return (
     <div className="bg-gray-100 min-h-screen py-16 px-8 md:px-16">
-      {/* Inject the enhanced effect CSS */}
       <style dangerouslySetInnerHTML={{ __html: enhancedEffectStyle }} />
-      
       <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between mb-16 md:mb-24">
           <h1 className="text-6xl md:text-8xl leading-loose mb-8 md:mb-0 max-w-3xl text-black font-thin">
-            <div style={{ height: "120px", width: "100%" }}>
-            Components
-            </div>
+            <div style={{ height: "120px", width: "100%" }}>Components</div>
           </h1>
           <div className="max-w-md">
             <p className="text-sm font-medium">
@@ -1340,32 +1149,25 @@ export default function FeaturedWork() {
             </p>
           </div>
         </div>
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Map through projects array */}
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {projects.map((project) => (
             <div key={project.id} className="flex flex-col">
-              <a 
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
-                <div 
-                  ref={project.ref}
-                  className={`rounded-2xl overflow-hidden mb-5 aspect-[4/3] image-hover-container cursor-pointer ${!imagesLoaded ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}`}
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+                <div
+                  className={`rounded-2xl overflow-hidden mb-5 aspect-[4/3] image-hover-container cursor-pointer ${
+                    !imagesLoaded ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'
+                  }`}
                   onMouseEnter={() => handleMouseEnter(project.id)}
                   onMouseLeave={handleMouseLeave}
-                  onMouseMove={(e) => handleMouseMove(e, project.ref)}
+                  onMouseMove={(e) => handleMouseMove(e)}
                 >
                   <div className={`image-wrapper w-full h-full ${isHovering === project.id && isGlitching ? 'glitching' : ''}`}>
                     {renderProjectImage(project)}
                   </div>
                   <div className={`image-glitch absolute inset-0 ${isHovering === project.id && isGlitching ? 'glitching' : ''}`}>
-                    <div 
-                      className="w-full h-full relative" 
-                    >
-                      <Image 
+                    <div className="w-full h-full relative">
+                      <Image
                         src={project.image}
                         alt={project.title}
                         fill
@@ -1380,13 +1182,8 @@ export default function FeaturedWork() {
               </a>
               <div className="mt-2">
                 <p className="text-xs tracking-wide mb-1 text-black">{project.tags}</p>
-                <h2 className="text-4xl font-light text-black">
-                  <a 
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline"
-                  >
+                <h2 className="text-3xl font-light text-black">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
                     {project.title}
                   </a>
                 </h2>
