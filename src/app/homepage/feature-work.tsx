@@ -1140,8 +1140,8 @@ export default function FeaturedWork() {
       <style dangerouslySetInnerHTML={{ __html: enhancedEffectStyle }} />
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between mb-16 md:mb-24">
-          <h1 className="text-6xl md:text-8xl leading-loose mb-8 md:mb-0 max-w-3xl text-black font-thin">
-            <div style={{ height: "120px", width: "100%" }}>Components</div>
+          <h1 className="text-4xl md:text-7xl leading-loose mb-8 md:mb-0 w-full text-black font-thin">
+            <div style={{ height: "120px", width: "90%" }}>Three JS Components</div>
           </h1>
           <div className="max-w-md">
             <p className="text-sm font-medium">
